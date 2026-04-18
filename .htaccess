@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # If you're using a subfolder (e.g., /api/)
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ /public/$1 [L,QSA]
+    
+    # Or if your document root is directly the Laravel folder:
+    # RewriteRule ^ index.php [L]
+</IfModule>
