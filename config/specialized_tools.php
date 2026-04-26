@@ -8,8 +8,8 @@ return [
     ],
     'bpm-tap-tempo' => [
         'name' => 'BPM Tap Tempo Tool',
-        'url' => 'https://bpmtaptempo.online',
         'description' => 'A BPM tap tempo tool for musicians and producers with metronome options, accuracy analysis, and history tracking.',
+        'url' => 'https://bpmtaptempo.online',
     ],
     'edu-calculator-hub' => [
         'name' => 'Education Calculator Hub',
@@ -25,5 +25,5 @@ return [
         'name' => 'JSON Into TOON Converter',
         'url' => 'https://json-into-toon.site',
         'description' => 'A browser-based converter for JSON and TOON formats with lossless conversion and privacy-focused processing.',
-    ],
+    ]
 ];

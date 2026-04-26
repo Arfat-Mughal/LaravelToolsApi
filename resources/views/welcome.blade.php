@@ -46,6 +46,24 @@
 </head>
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
     <div class="container mx-auto px-4 py-12 max-w-7xl">
+        <div class="mb-6 flex justify-end gap-3">
+            @auth
+                <a href="{{ route('dashboard') }}" class="rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
+                    Dashboard
+                </a>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
+                        Logout
+                    </button>
+                </form>
+            @else
+                <a href="{{ route('login') }}" class="rounded-lg bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
+                    Login
+                </a>
+            @endauth
+        </div>
+
         <!-- Header Section -->
         <div class="text-center mb-12 animate-fade-in">
             <div class="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4">
